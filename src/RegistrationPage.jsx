@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import makeStyles from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,26 +11,6 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: theme.palette.background.default,
-    },
-    textField: {
-        margin: theme.spacing(3),
-        width: '100%',
-    },
-    button: {
-        margin: theme.spacing(2, 0),
-        width: '100%',
-    },
-    link: {
-        textAlign: 'center',
-    },
-}));
 
 const RegistrationPage = () => {
     const [firstName, setFirstName] = useState('');
@@ -41,7 +20,7 @@ const RegistrationPage = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
-    const classes = useStyles();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
